@@ -18,20 +18,28 @@ if answer == "left":
         print("Not a valid option ")
 
 elif answer == "right":
-    print("You come to a bridge , it looks wobbly, do want to cross it or head back ? ")
+    answer = input(
+        "You come to a bridge , it looks wobbly, do want to cross it or head back ? "
+    ).lower()
 
     if answer == "back":
         print("you go back and lose.")
-    elif answer == "cross":
-        print(
-            "you cross the bridge and meet the stranger, do want to talk to them Yes/No ?"
-        )
 
-        if answer == "Yes":
+    elif answer == "cross":
+        answer = input(
+            "you cross the bridge and meet the stranger, do want to talk to them Yes/No ?"
+        ).lower()
+
+        if answer == "yes":
             print("You talk to stranger and they give you gold .. You WON!!")
-        elif answer == "No":
+        elif answer == "no":
             print("you ign the stranger and they killed you :(")
         else:
-            print("Not a valid line")
+            print("Not a valid line 1")
+    else:
+        print("Not a valid line 2")
+
 else:
-    print("Not a valid line")
+    print("Not a valid line 3")
+
+print("thank you for trying", name)
